@@ -1,0 +1,132 @@
+.file-upload {
+  margin-bottom: 20px;
+}
+
+.file-upload-dropzone {
+  border: 2px dashed var(--neutral-border);
+  border-radius: 8px;
+  padding: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--neutral-light);
+}
+
+.file-upload-dropzone:hover {
+  border-color: var(--primary-red);
+  background-color: #fef2f2;
+}
+
+.file-upload-dropzone.active {
+  border-color: var(--primary-red);
+  background-color: #fee2e2;
+}
+
+.file-upload-content {
+  pointer-events: none;
+}
+
+.file-upload-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 12px;
+  color: var(--primary-red);
+}
+
+.file-upload-text {
+  font-size: 16px;
+  color: var(--text-primary);
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+.file-upload-hint {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.file-upload-list {
+  margin-top: 16px;
+  padding: 16px;
+  background-color: var(--neutral-light);
+  border-radius: 8px;
+  border: 1px solid var(--neutral-border);
+}
+
+.file-upload-list h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.file-upload-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background-color: var(--neutral-white);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px solid var(--neutral-border);
+}
+
+.file-upload-item:last-child {
+  margin-bottom: 0;
+}
+
+.file-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  color: var(--primary-red);
+}
+
+.file-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.file-name {
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-size {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.file-remove-btn {
+  background: none;
+  border: none;
+  color: var(--error);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.file-remove-btn:hover {
+  background-color: #fee2e2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .file-upload-dropzone {
+    padding: 24px 16px;
+  }
+
+  .file-upload-icon {
+    font-size: 36px;
+  }
+}

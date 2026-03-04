@@ -1,0 +1,42 @@
+.create-ticket {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--neutral-white);
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-border);
+}
+
+.create-ticket h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--primary-red);
+}
+
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.disabled-input {
+  background-color: var(--neutral-light) !important;
+  cursor: not-allowed;
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .create-ticket {
+    padding: 24px;
+    margin: 0 16px;
+  }
+
+  .create-ticket h2 {
+    font-size: 20px;
+  }
+}
