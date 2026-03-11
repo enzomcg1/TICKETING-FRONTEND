@@ -145,8 +145,8 @@ function RequestRegister() {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                minLength={6}
-                placeholder="Mínimo 6 caracteres"
+                minLength={8}
+                placeholder="Mínimo 8 caracteres"
                 disabled={loading}
               />
             </div>
