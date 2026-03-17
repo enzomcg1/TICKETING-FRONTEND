@@ -3,7 +3,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: var(--neutral-light);
+  background-color: transparent;
   position: relative;
 }
 
@@ -14,9 +14,10 @@
   left: 240px;
   right: 0;
   height: 60px;
-  background-color: var(--neutral-white);
-  border-bottom: 2px solid var(--primary-red);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.78);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(18px);
   z-index: 999;
   display: flex;
   align-items: center;
@@ -44,9 +45,9 @@
 .theme-toggle-btn {
   width: 40px;
   height: 40px;
-  border-radius: 8px;
-  border: 1px solid var(--neutral-border);
-  background-color: var(--neutral-white);
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.85);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -57,9 +58,9 @@
 }
 
 .theme-toggle-btn:hover {
-  background-color: var(--neutral-light);
-  border-color: var(--primary-red);
-  transform: scale(1.05);
+  background-color: #fff;
+  border-color: rgba(239, 68, 68, 0.28);
+  transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
 
@@ -79,9 +80,10 @@
   align-items: center;
   gap: 12px;
   padding: 8px 12px;
-  background-color: var(--neutral-light);
-  border-radius: 8px;
-  border: 1px solid var(--neutral-border);
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: var(--shadow-sm);
 }
 
 .user-menu-info {
@@ -94,7 +96,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
   color: var(--neutral-white);
   display: flex;
   align-items: center;
@@ -128,8 +130,8 @@
   padding: 6px 10px;
   background-color: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--neutral-border);
-  border-radius: 6px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -139,9 +141,9 @@
 }
 
 .btn-change-password-small:hover {
-  background-color: #dbeafe;
-  color: #1e40af;
-  border-color: #93c5fd;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
 }
 
 .password-icon-small {
@@ -152,8 +154,8 @@
   padding: 8px;
   background-color: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--neutral-border);
-  border-radius: 6px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
   font-size: 16px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -167,11 +169,11 @@
 }
 
 .btn-logout-small:hover {
-  background-color: var(--primary-red);
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
   color: var(--neutral-white);
-  border-color: var(--primary-red);
+  border-color: transparent;
   transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 12px 24px rgba(239, 68, 68, 0.22);
 }
 
 .logout-icon-small {
@@ -210,10 +212,10 @@
   z-index: 1003;
   width: 48px;
   height: 48px;
-  background-color: var(--primary-red);
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
   color: var(--neutral-white);
   border: none;
-  border-radius: 8px;
+  border-radius: 16px;
   font-size: 24px;
   cursor: pointer;
   box-shadow: var(--shadow-lg);
@@ -247,22 +249,25 @@
 .sidebar {
   width: 240px;
   min-height: 100vh;
-  background-color: var(--neutral-white);
-  border-right: 2px solid var(--primary-red);
+  background:
+    radial-gradient(circle at top, rgba(248, 113, 113, 0.12), transparent 28%),
+    rgba(255, 255, 255, 0.76);
+  border-right: 1px solid rgba(15, 23, 42, 0.08);
   display: flex;
   flex-direction: column;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 1000;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(18px);
 }
 
 .sidebar-header {
   padding: 16px 12px;
-  border-bottom: 2px solid var(--neutral-border);
-  background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+  background: linear-gradient(160deg, #111827 0%, #7f1d1d 100%);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16);
   position: relative;
 }
 
@@ -293,10 +298,10 @@
   /* Asegurar que la imagen se renderice correctamente */
   image-rendering: auto;
   /* Contenedor blanco para el logo */
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.98);
   padding: 8px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.2);
   /* Si el logo necesita ser blanco, usar este filtro */
   /* filter: brightness(0) invert(1); */
 }
@@ -342,13 +347,15 @@
   color: var(--text-primary);
   transition: all 0.2s ease;
   text-align: left;
-  border-radius: 0;
+  border-radius: 16px;
+  margin: 0 10px;
+  width: calc(100% - 20px);
 }
 
 .menu-toggle:hover {
-  background-color: var(--neutral-light);
+  background-color: rgba(255, 255, 255, 0.8);
   color: var(--primary-red);
-  padding-left: 16px;
+  padding-left: 14px;
 }
 
 .menu-icon {
@@ -389,16 +396,17 @@
 }
 
 .menu-items {
-  background-color: var(--neutral-light);
-  border-top: 1px solid var(--neutral-border);
-  border-bottom: 1px solid var(--neutral-border);
+  background-color: transparent;
+  border-top: none;
+  border-bottom: none;
+  padding: 4px 10px 8px;
 }
 
 .menu-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 14px 10px 48px;
+  padding: 10px 14px 10px 38px;
   color: var(--text-primary);
   text-decoration: none;
   font-size: 13px;
@@ -406,22 +414,24 @@
   transition: all 0.2s ease;
   border-left: 3px solid transparent;
   position: relative;
+  border-radius: 14px;
+  margin-bottom: 4px;
 }
 
 .menu-item:hover {
-  background-color: #fef2f2;
+  background-color: rgba(255, 241, 242, 0.9);
   color: var(--primary-red);
   border-left-color: var(--primary-red);
-  padding-left: 45px;
+  padding-left: 38px;
   font-weight: 600;
 }
 
 .menu-item.active {
-  background-color: #fee2e2;
+  background: linear-gradient(135deg, rgba(254, 226, 226, 0.96), rgba(255, 237, 213, 0.96));
   color: var(--primary-red);
   border-left-color: var(--primary-red);
   font-weight: 700;
-  box-shadow: inset 3px 0 0 var(--primary-red), inset 0 0 8px rgba(220, 38, 38, 0.1);
+  box-shadow: inset 3px 0 0 var(--primary-red), 0 12px 24px rgba(239, 68, 68, 0.08);
 }
 
 .menu-item-icon {
@@ -452,9 +462,9 @@
 
 /* Footer del Sidebar */
 .sidebar-footer {
-  border-top: 2px solid var(--neutral-border);
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
   padding: 12px 10px;
-  background-color: var(--neutral-light);
+  background-color: rgba(255, 255, 255, 0.5);
   min-height: 60px;
 }
 
@@ -464,7 +474,7 @@
   margin-left: 240px;
   margin-top: 60px;
   min-height: calc(100vh - 60px);
-  background-color: var(--neutral-light);
+  background-color: transparent;
 }
 
 .main-container {
@@ -475,9 +485,10 @@
 
 /* Header Simple para usuarios no autenticados */
 .header-simple {
-  background-color: var(--neutral-white);
-  border-bottom: 2px solid var(--primary-red);
+  background: rgba(255, 255, 255, 0.82);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   box-shadow: var(--shadow-md);
+  backdrop-filter: blur(18px);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -541,7 +552,7 @@
 .btn-register,
 .btn-login {
   padding: 10px 20px;
-  border-radius: 6px;
+  border-radius: 999px;
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
@@ -553,16 +564,16 @@
 .btn-register {
   background-color: transparent;
   color: var(--primary-red);
-  border: 2px solid var(--primary-red);
+  border: 1px solid rgba(239, 68, 68, 0.24);
 }
 
 .btn-register:hover {
-  background-color: var(--primary-red);
-  color: var(--neutral-white);
+  background-color: rgba(239, 68, 68, 0.08);
+  color: var(--primary-red);
 }
 
 .btn-login {
-  background-color: var(--primary-red);
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
   color: var(--neutral-white);
 }
 

@@ -4,3 +4,4 @@ dist/
 .env.*
 !.env.render.example
 npm-debug.log*
+.vercel
